@@ -1,0 +1,21 @@
+ .racer_table td {
+  background-color: grey;
+  height: 50px;
+  width: 50px;
+  border: 1px dotted black;
+  text-align: center;
+}
+
+.racer_table #player1_strip td.active {
+  background: url("/images/cart1.jpg")0,0;
+}
+
+.racer_table #player2_strip td.active {
+  background: url("/images/cart2.jpg")0,0;
+}
+
+ .racer_table {
+   color: black;
+  border: 1px dotted black;
+
+}

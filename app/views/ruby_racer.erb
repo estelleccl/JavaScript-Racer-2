@@ -1,0 +1,72 @@
+<script>
+  $(document).ready(function() {
+    var count = 1;
+    var count1 = 1;
+    $(document).on('keyup', function(event) {
+      // Detect which key was pressed and call the appropriate function
+      // Google "jquery keyup what key was pressed" if you don't know how
+       if(event.which == 81) {
+          if (count==16){
+              $("#player1_" + count).addClass('active');
+              alert( "Player 1 Win!" );
+              location.reload();
+          }else{
+            count = update_player_position("#player1_", count)
+          }
+        }
+       if(event.which == 80) {
+          if (count1==16){
+            $("#player2_" + count1).addClass('active');
+            alert( "Player 2 Win!" );
+            location.reload();
+          }else{
+            count1 = update_player_position("#player2_", count1)
+            }
+        }
+      });
+  });
+</script>
+
+<table class="racer_table">
+  <tr id="player1_strip">
+    <td id = "player1_1" class="active">-</td>
+    <td id = "player1_2">-</td>
+    <td id = "player1_3">-</td>
+    <td id = "player1_4">-</td>
+    <td id = "player1_5">-</td>
+    <td id = "player1_6">-</td>
+    <td id = "player1_7">-</td>
+    <td id = "player1_8">-</td>
+    <td id = "player1_9">-</td>
+    <td id = "player1_10">-</td>
+    <td id = "player1_11">-</td>
+    <td id = "player1_12">-</td>
+    <td id = "player1_13">-</td>
+    <td id = "player1_14">-</td>
+    <td id = "player1_15">-</td>
+    <td id = "player1_16">WIN</td>
+    
+  </tr>
+  <tr id="player2_strip">
+    <td id = "player2_1" class="active">-</td>
+    <td id = "player2_2">-</td>
+    <td id = "player2_3">-</td>
+    <td id = "player2_4">-</td>
+    <td id = "player2_5">-</td>
+    <td id = "player2_6">-</td>
+    <td id = "player2_7">-</td>
+    <td id = "player2_8">-</td>
+    <td id = "player2_9">-</td>
+    <td id = "player2_10">-</td>
+    <td id = "player2_11">-</td>
+    <td id = "player2_12">-</td>
+    <td id = "player2_13">-</td>
+    <td id = "player2_14">-</td>
+    <td id = "player2_15">-</td>
+    <td id = "player2_16">WIN</td>
+  </tr>
+  <a href = "../ruby_racer_jquery/ruby_racer.html">
+  <button type="button">Want to play again!!!</button></a>
+  
+  <br>
+  <br>
