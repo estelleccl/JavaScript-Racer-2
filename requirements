@@ -1,0 +1,31 @@
+1)The flow goes like this:
+
+	Two people get on a computer and visit the application
+
+	The application prompts each player to enter their name
+
+	The players fill out the form and this creates a new game
+
+	The new game starts, and each player smashes their respective key until one of them wins
+
+	After one of them wins, the winning player and amount of time it took to win is sent to the server and the game is recorded as being "done"
+
+	The players can choose to start another game using their same initials, or restart using different initials
+After a game is finished the players are given a unique URL at which they can view the results of that particular game
+
+2) A player can be in many games and a game can have multiple players. 
+
+3) Player names should be unique. If someone chooses the game initials/name/etc. as someone else they'll be playing the same "player."
+
+4) This means there should be a uniqueness constraint at both the database level by using a UNIQUE INDEX and a uniqueness constraint on the Player model. 
+http://guides.rubyonrails.org/active_record_validations.html#uniqueness
+
+5) You can make a UNIQUE INDEX by adding :unique => true to your add_index call. It's important to enforce this at both the ActiveRecord and database level. 
+
+6) You should use a custom ActiveRecord validation to ensure that every game has exactly two players. This constraint is hard to model on the database level, so we leave it to ActiveRecord.
+http://guides.rubyonrails.org/active_record_validations.html#custom-methods
+
+7) you need routes which correspond to:
+	Starting / creating a new game
+	Playing a new game
+	Viewing the results of an old game
