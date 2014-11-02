@@ -1,23 +1,15 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
+  <h1>Welcome to Ruby Racers!</h1>
   <p>Hello, world!</p>
+</div>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+<form id= "players_details" action="/players/new" method="post">
+    <b>Please enter your player 1 name:</b>
+    <input type="text" name="player_1"><br>
+    <b>Please enter your player 2 name:</b>
+    <input type="text" name="player_2">
+    <input type="submit", value="Let The Game Begins">
+</form>
+
+<div id = "race_track">
 </div>

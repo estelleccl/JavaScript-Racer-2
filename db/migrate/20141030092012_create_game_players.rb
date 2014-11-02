@@ -3,6 +3,7 @@ class CreateGamePlayers < ActiveRecord::Migration
     create_table :game_players do |t|
       t.integer :player_id
       t.integer :game_id
+      t.boolean :winner?, default: false
       
       t.timestamps
     end  

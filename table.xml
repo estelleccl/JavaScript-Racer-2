@@ -48,7 +48,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="238" y="13" name="games">
+<table x="275" y="17" name="games">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -59,7 +59,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="101" y="110" name="player_games">
+<table x="81" y="112" name="player_games">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -71,6 +71,9 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="games" row="id" />
 </row>
+<row name="winner?" null="1" autoincrement="0">
+<datatype>bit</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>

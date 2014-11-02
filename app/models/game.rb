@@ -1,4 +1,4 @@
 class Game < ActiveRecord::Base
-  belongs_to :post
-  belongs_to :tag
+  has_many :players, through: :game_players
+  has_many :game_players
 end

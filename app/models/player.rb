@@ -1,4 +1,5 @@
 class Player < ActiveRecord::Base
-  belongs_to :post
-  belongs_to :tag
+  validates_uniqueness_of :name
+  has_many :games, through: :game_players
+  has_many :game_players
 end

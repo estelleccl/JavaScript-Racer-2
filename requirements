@@ -13,14 +13,14 @@
 	The players can choose to start another game using their same initials, or restart using different initials
 After a game is finished the players are given a unique URL at which they can view the results of that particular game
 
-2) A player can be in many games and a game can have multiple players. 
+/2) A player can be in many games and a game can have multiple players. 
 
-3) Player names should be unique. If someone chooses the game initials/name/etc. as someone else they'll be playing the same "player."
+√3) Player names should be unique. If someone chooses the game initials/name/etc. as someone else they'll be playing the same "player."
 
-4) This means there should be a uniqueness constraint at both the database level by using a UNIQUE INDEX and a uniqueness constraint on the Player model. 
+√4) This means there should be a uniqueness constraint at both the database level by using a UNIQUE INDEX and a uniqueness constraint on the Player model. 
 http://guides.rubyonrails.org/active_record_validations.html#uniqueness
 
-5) You can make a UNIQUE INDEX by adding :unique => true to your add_index call. It's important to enforce this at both the ActiveRecord and database level. 
+√5) You can make a UNIQUE INDEX by adding :unique => true to your add_index call. It's important to enforce this at both the ActiveRecord and database level. 
 
 6) You should use a custom ActiveRecord validation to ensure that every game has exactly two players. This constraint is hard to model on the database level, so we leave it to ActiveRecord.
 http://guides.rubyonrails.org/active_record_validations.html#custom-methods
